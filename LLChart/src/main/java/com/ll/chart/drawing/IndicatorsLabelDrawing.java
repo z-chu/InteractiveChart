@@ -36,13 +36,13 @@ public class IndicatorsLabelDrawing extends AbsDrawing<CandleRender> {
         TextPaint ma20Paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
 
         ma5Paint.setTextSize(attribute.indicatorsTextSize);
-        ma5Paint.setColor(attribute.ma5Color);
+        ma5Paint.setColor(attribute.line1Color);
 
         ma10Paint.setTextSize(attribute.indicatorsTextSize);
-        ma10Paint.setColor(attribute.ma10Color);
+        ma10Paint.setColor(attribute.line2Color);
 
         ma20Paint.setTextSize(attribute.indicatorsTextSize);
-        ma20Paint.setColor(attribute.ma20Color);
+        ma20Paint.setColor(attribute.line3Color);
 
         labelPaint[0] = ma5Paint;
         labelPaint[1] = ma10Paint;
@@ -56,10 +56,10 @@ public class IndicatorsLabelDrawing extends AbsDrawing<CandleRender> {
         TextPaint volumeMa10Paint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
 
         volumeMa5Paint.setTextSize(attribute.indicatorsTextSize);
-        volumeMa5Paint.setColor(attribute.ma5Color);
+        volumeMa5Paint.setColor(attribute.line1Color);
 
         volumeMa10Paint.setTextSize(attribute.indicatorsTextSize);
-        volumeMa10Paint.setColor(attribute.ma10Color);
+        volumeMa10Paint.setColor(attribute.line2Color);
 
         labelPaint[0] = volumeMa5Paint;
         labelPaint[1] = volumeMa10Paint;
@@ -70,8 +70,15 @@ public class IndicatorsLabelDrawing extends AbsDrawing<CandleRender> {
         labelText = new String[0];
         break;
     }
-    for (TextPaint paint : labelPaint) {
-      paint.setTypeface(FontConfig.typeFace);
+    switch (attribute.indicatorsLabelLocation) {
+      case RIGHT_TOP:
+      case RIGHT_BOTTOM:
+      case RIGHT_TOP_INSIDE:
+      case RIGHT_BOTTOM_INSIDE:
+        for (Paint paint : labelPaint) {
+          paint.setTextAlign(Paint.Align.RIGHT);
+        }
+        break;
     }
   }
 
@@ -98,7 +105,21 @@ public class IndicatorsLabelDrawing extends AbsDrawing<CandleRender> {
     float currentX = x;
     for (int i = 0; i < labelPaint.length; i++) {
       canvas.drawText(labelText[i], currentX, y, labelPaint[i]);
-      currentX += labelPaint[i].measureText(labelText[i]) + attribute.indicatorsTextInterval;
+      switch (attribute.indicatorsLabelLocation) {
+        case LEFT_TOP_INSIDE://左上（内部）
+        case LEFT_TOP://左上
+        case LEFT_BOTTOM_INSIDE://左下（内部）
+        case LEFT_BOTTOM://左下
+          currentX += (labelPaint[i].measureText(labelText[i]) + attribute.indicatorsTextInterval);
+          break;
+        case RIGHT_TOP_INSIDE://右上（内部）
+        case RIGHT_TOP://右上
+        case RIGHT_BOTTOM_INSIDE://右下（内部）
+        case RIGHT_BOTTOM://右下
+          int z = labelPaint.length - 1 - i;
+          currentX -= (labelPaint[z].measureText(labelText[z]) + attribute.indicatorsTextInterval);
+          break;
+      }
     }
   }
 
@@ -108,7 +129,51 @@ public class IndicatorsLabelDrawing extends AbsDrawing<CandleRender> {
   }
 
   @Override public void onViewChange() {
-    x = viewRect.left + attribute.indicatorsTextMarginX;
-    y = viewRect.top + attribute.indicatorsTextMarginY + attribute.indicatorsTextSize;
+    switch (attribute.indicatorsLabelLocation) {
+      case LEFT_TOP_INSIDE://左上（内部）
+        x = viewRect.left + attribute.indicatorsTextMarginX;
+        y = viewRect.top
+            + attribute.indicatorsTextMarginY
+            + attribute.indicatorsTextSize
+            + attribute.borderWidth;
+        break;
+      case RIGHT_TOP_INSIDE://右上（内部）
+        x = viewRect.right - attribute.indicatorsTextMarginX;
+        y = viewRect.top
+            + attribute.indicatorsTextMarginY
+            + attribute.indicatorsTextSize
+            + attribute.borderWidth;
+        break;
+      case LEFT_TOP://左上
+        x = viewRect.left + attribute.indicatorsTextMarginX;
+        y = viewRect.top - attribute.indicatorsTextMarginY - attribute.borderWidth;
+        break;
+      case RIGHT_TOP://右上
+        x = viewRect.right - attribute.indicatorsTextMarginX;
+        y = viewRect.top - attribute.indicatorsTextMarginY - attribute.borderWidth;
+        break;
+      case LEFT_BOTTOM_INSIDE://左下（内部）
+        x = viewRect.left + attribute.indicatorsTextMarginX;
+        y = viewRect.bottom - attribute.indicatorsTextMarginY - attribute.borderWidth;
+        break;
+      case RIGHT_BOTTOM_INSIDE://右下（内部）
+        x = viewRect.right - attribute.indicatorsTextMarginX;
+        y = viewRect.bottom - attribute.indicatorsTextMarginY - attribute.borderWidth;
+        break;
+      case LEFT_BOTTOM://左下
+        x = viewRect.left + attribute.indicatorsTextMarginX;
+        y = viewRect.bottom
+            + attribute.indicatorsTextMarginY
+            + attribute.indicatorsTextSize
+            + attribute.borderWidth;
+        break;
+      case RIGHT_BOTTOM://右下
+        x = viewRect.right - attribute.indicatorsTextMarginX;
+        y = viewRect.bottom
+            + attribute.indicatorsTextMarginY
+            + attribute.indicatorsTextSize
+            + attribute.borderWidth;
+        break;
+    }
   }
 }
