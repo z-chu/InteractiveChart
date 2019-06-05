@@ -2,7 +2,7 @@
 package com.ll.chart.compat.attribute;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * <p>蜡烛图属性配置类</p>

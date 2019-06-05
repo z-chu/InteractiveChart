@@ -4,7 +4,7 @@ package com.ll.chart.render;
 
 import android.graphics.Canvas;
 import android.graphics.RectF;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.ll.chart.adapter.DepthAdapter;
 import com.ll.chart.compat.ValueUtils;
 import com.ll.chart.compat.attribute.DepthAttribute;

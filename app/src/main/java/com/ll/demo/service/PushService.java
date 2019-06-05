@@ -2,7 +2,7 @@ package com.ll.demo.service;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import com.ll.chart.entry.CandleEntry;
 import com.ll.demo.model.ServiceMessage;
 import java.math.BigDecimal;

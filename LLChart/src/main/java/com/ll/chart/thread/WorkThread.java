@@ -2,7 +2,7 @@ package com.ll.chart.thread;
 
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.ll.chart.enumeration.ObserverArg;
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.ll.chart.animator;
 
 import android.animation.ValueAnimator;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.ll.chart.compat.Utils;
 import com.ll.chart.entry.AbsEntry;
 import com.ll.chart.entry.ValueEntry;

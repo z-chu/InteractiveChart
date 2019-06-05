@@ -2,8 +2,8 @@ package com.ll.chart.compat;
 
 import android.content.Context;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
-import android.support.annotation.Size;
+import androidx.annotation.NonNull;
+import androidx.annotation.Size;
 import android.text.TextPaint;
 import java.util.Collection;
 

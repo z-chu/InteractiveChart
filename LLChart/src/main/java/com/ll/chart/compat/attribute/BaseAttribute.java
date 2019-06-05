@@ -3,7 +3,7 @@ package com.ll.chart.compat.attribute;
 
 import android.content.Context;
 import android.graphics.Paint;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.ll.chart.enumeration.AxisLabelLocation;
 import com.ll.chart.enumeration.GridMarkerAlign;
 import com.ll.chart.enumeration.AxisMarkerAlign;
