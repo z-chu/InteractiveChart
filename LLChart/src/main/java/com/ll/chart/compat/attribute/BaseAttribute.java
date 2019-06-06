@@ -120,8 +120,8 @@ public class BaseAttribute {
   /**
    * 涨跌有关的属性
    */
-  public int increasingColor = 0xffb5fc00; // 上涨颜色
-  public int decreasingColor = 0xfffe0d5e; // 下跌颜色
+  public int increasingColor = 0xff70B76D; // 上涨颜色
+  public int decreasingColor = 0xffC45E5C; // 下跌颜色
   public Paint.Style increasingStyle = Paint.Style.FILL; // 上涨蜡烛图填充样式。默认实心
   public Paint.Style decreasingStyle = Paint.Style.STROKE; // 下跌蜡烛图填充样式，默认空心
 
