@@ -41,6 +41,8 @@ import com.ll.chart.module.RSIChartModule;
 import com.ll.chart.module.TimeLineChartModule;
 import com.ll.chart.module.VolumeChartModule;
 import com.ll.chart.module.base.AbsChartModule;
+import com.ll.chart.module.base.AuxiliaryChartModule;
+import com.ll.chart.module.base.MainChartModule;
 import com.ll.chart.render.AbsRender;
 
 import java.util.ArrayList;
@@ -192,30 +194,17 @@ public class ChartLayout extends ConstraintLayout {
             return false;
         }
         AbsChartModule chartModule = ChartModules.get(moduleType);
-        if (null == chartModule) {
+        if (null == chartModule || chartModule.isEnable()) {
             return false;
         }
-        if (chartModule.getModuleType() == ModuleType.MACD ||
-                chartModule.getModuleType() == ModuleType.KDJ ||
-                chartModule.getModuleType() == ModuleType.RSI ||
-                chartModule.getModuleType() == ModuleType.BOLL
-        ) {
-            chartModule.setEnable(!chartModule.isEnable());
-            for (Map.Entry<ModuleType, AbsChartModule> item : ChartModules.entrySet()) {
-                ModuleType key = item.getKey();
-                if (key != moduleType&&(key == ModuleType.MACD ||
-                        key == ModuleType.KDJ ||
-                        key == ModuleType.RSI ||
-                        key == ModuleType.BOLL)
-                ) {
-                    item.getValue().setEnable(false);
-                }
+        chartModule.setEnable(true);
+        Class classType = chartModule instanceof MainChartModule ?
+                MainChartModule.class : AuxiliaryChartModule.class;
+        for (Map.Entry<ModuleType, AbsChartModule> item : ChartModules.entrySet()) {
+            if (item.getValue().isEnable() && classType.isInstance(item.getValue())
+                    && item.getKey() != moduleType && item.getKey() != ModuleType.VOLUME) {
+                item.getValue().setEnable(false);
             }
-        } else {
-            if (chartModule.isEnable()) {
-                return false;
-            }
-            chartModule.setEnable(true);
         }
         return true;
     }

@@ -49,14 +49,18 @@ public class BOLLDrawing extends AbsDrawing<CandleRender> {
     r1Paint.setColor(attribute.bollMidLineColor);
     r1Paint.setStrokeWidth(attribute.lineWidth);
     r1Paint.setStyle(Paint.Style.STROKE);
+    r1Paint.setAntiAlias(true);
 
     r2Paint.setColor(attribute.bollUpperLineColor);
     r2Paint.setStrokeWidth(attribute.lineWidth);
     r2Paint.setStyle(Paint.Style.STROKE);
+    r2Paint.setAntiAlias(true);
 
     r3Paint.setColor(attribute.bollLowerLineColor);
     r3Paint.setStrokeWidth(attribute.lineWidth);
     r3Paint.setStyle(Paint.Style.STROKE);
+    r3Paint.setAntiAlias(true);
+
   }
 
   @Override

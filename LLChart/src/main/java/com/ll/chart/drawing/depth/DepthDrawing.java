@@ -54,10 +54,14 @@ public class DepthDrawing extends AbsDrawing<DepthRender> {
     bidPolylinePaint.setStrokeWidth(attribute.polylineWidth);
     bidPolylinePaint.setColor(attribute.bidLineColor);
     bidPolylinePaint.setStyle(Paint.Style.STROKE);
+    bidPolylinePaint.setAntiAlias(true);
+
 
     askPolylinePaint.setStrokeWidth(attribute.polylineWidth);
     askPolylinePaint.setColor(attribute.askLineColor);
     askPolylinePaint.setStyle(Paint.Style.STROKE);
+    askPolylinePaint.setAntiAlias(true);
+
 
     bidShaderPaint.setColor(attribute.bidShaderColor);
     bidShaderPaint.setStyle(Paint.Style.FILL);

@@ -35,14 +35,17 @@ public class MADrawing extends AbsDrawing<CandleRender> {
     attribute = render.getAttribute();
 
     ma5Paint.setStyle(Paint.Style.STROKE);
+    ma5Paint.setAntiAlias(true);
     ma5Paint.setStrokeWidth(attribute.lineWidth);
     ma5Paint.setColor(attribute.ma5Color);
 
     ma10Paint.setStyle(Paint.Style.STROKE);
+    ma10Paint.setAntiAlias(true);
     ma10Paint.setStrokeWidth(attribute.lineWidth);
     ma10Paint.setColor(attribute.ma10Color);
 
     ma20Paint.setStyle(Paint.Style.STROKE);
+    ma20Paint.setAntiAlias(true);
     ma20Paint.setStrokeWidth(attribute.lineWidth);
     ma20Paint.setColor(attribute.ma20Color);
   }

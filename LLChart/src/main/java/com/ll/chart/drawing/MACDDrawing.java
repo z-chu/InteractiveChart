@@ -60,10 +60,12 @@ public class MACDDrawing extends AbsDrawing<CandleRender> {
     borderPaint.setColor(attribute.borderColor);
 
     deaPaint.setStyle(Paint.Style.STROKE);
+    deaPaint.setAntiAlias(true);
     deaPaint.setStrokeWidth(attribute.lineWidth);
     deaPaint.setColor(attribute.deaLineColor);
 
     diffPaint.setStyle(Paint.Style.STROKE);
+    diffPaint.setAntiAlias(true);
     diffPaint.setStrokeWidth(attribute.lineWidth);
     diffPaint.setColor(attribute.diffLineColor);
 

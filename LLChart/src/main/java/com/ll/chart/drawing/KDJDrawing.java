@@ -47,14 +47,17 @@ public class KDJDrawing extends AbsDrawing<CandleRender> {
     borderPaint.setColor(attribute.borderColor);
 
     kPaint.setStyle(Paint.Style.STROKE);
+    kPaint.setAntiAlias(true);
     kPaint.setStrokeWidth(attribute.lineWidth);
     kPaint.setColor(attribute.kdjKLineColor);
 
     dPaint.setStyle(Paint.Style.STROKE);
+    dPaint.setAntiAlias(true);
     dPaint.setStrokeWidth(attribute.lineWidth);
     dPaint.setColor(attribute.kdjDLineColor);
 
     jPaint.setStyle(Paint.Style.STROKE);
+    jPaint.setAntiAlias(true);
     jPaint.setStrokeWidth(attribute.lineWidth);
     jPaint.setColor(attribute.kdjJLineColor);
   }
