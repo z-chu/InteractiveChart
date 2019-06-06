@@ -143,7 +143,7 @@ public class BaseAttribute {
   /**
    * 与股票指标有关的属性
    */
-  public int centerLineColor = 0xffffffff; // 视图中心线颜色
+  public int centerLineColor = 0x10ffffff; // 视图中心线颜色
 
   public int ma5Color = 0xff9561fa; // MA5 平均线颜色
   public int ma10Color = 0xffffcb62; // MA10 平均线颜色

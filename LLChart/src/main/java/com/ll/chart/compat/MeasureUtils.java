@@ -67,6 +67,8 @@ public class MeasureUtils {
     height -= viewIntervalCount;
     float parentHeight = viewIntervalCount;
     float value;
+
+    float totalProportion=0f;
     for (int i = 0, z = chartModules.size(), count = enableViewCount; i < z; i++) {
       AbsChartModule item = chartModules.get(i);
       if (isInitProportion) {
@@ -78,10 +80,15 @@ public class MeasureUtils {
         }
         item.setProportion(value == 0 ? getDefaultProportion(item.getModuleType()) : value);
       }
-      item.setViewHeight(height * item.getProportion());
+      if(item.isEnable()) {
+        totalProportion += item.getProportion();
+      }
+    }
+
+    for (int i = 0, z = chartModules.size(); i < z; i++) {
+      AbsChartModule item = chartModules.get(i);
+      item.setViewHeight(height * (item.getProportion()/totalProportion));
       parentHeight += item.isEnable() ? item.getViewHeight() : 0;
-      //Log.e(TAG, "--Proportion：" + item.getProportion());
-      Log.e(TAG, "--viewHeight：" + item.getViewHeight());
     }
     isInitProportion = false;
     return parentHeight;
@@ -148,14 +155,14 @@ public class MeasureUtils {
     switch (moduleType) {
       case CANDLE:// K线 模块高度
       case TIME:// 分时图 模块高度
-        return 0.55f;
+        return 0.58f;
       case VOLUME: // 交易量 模块高度
-        return 0.15f;
+        return 0.21f;
       case MACD:  //MACD 模块高度
       case KDJ:  //KDJ 模块高度
       case RSI:  //RSI 模块高度
       case BOLL:  //BOLL 模块高度
-        return 0.3f;
+        return 0.21f;
       case DEPTH:// 深度图 模块高度
       default:
         return 1f;

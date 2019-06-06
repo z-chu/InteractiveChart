@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingEnd="10dp"
-    android:paddingStart="10dp"
     >
   <com.ll.demo.view.XRadioGroup
       android:id="@+id/tab_layout"
@@ -197,7 +195,7 @@
         android:layout_height="0dp"
         android:background="#202a33"
         app:axisLabelLocation="right"
-        app:borderWidth="1dp"
+        app:borderWidth="0dp"
         app:decreasingStyle="fill"
         app:gridCount="4"
         app:gridIsHide="true"
