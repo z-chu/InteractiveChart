@@ -79,8 +79,15 @@ public class DepthDrawing extends AbsDrawing<DepthRender, DepthChartModule> {
 
     @Override
     public void onComputation(int begin, int end, int current, float[] extremum) {
+        if (render == null) {
+            return;
+        }
+        DepthAdapter adapter = render.getAdapter();
+        if (adapter == null) {
+            return;
+        }
         float x0, x1;
-        DepthEntry entry = render.getAdapter().getItem(current);
+        DepthEntry entry = adapter.getItem(current);
         pathPts[0] = entry.getPrice().value;
         pathPts[1] = entry.getTotalAmount().value;
         //计算数据点

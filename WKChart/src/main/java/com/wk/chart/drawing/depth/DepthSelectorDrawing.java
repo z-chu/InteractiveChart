@@ -3,6 +3,7 @@ package com.wk.chart.drawing.depth;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.os.Build;
 import android.text.TextPaint;
 
@@ -125,13 +126,14 @@ public class DepthSelectorDrawing extends AbsDrawing<DepthRender, AbsChartModule
         viewRectBuffer[3] = top + selectedHeight;
 
         //绘制选择器外边框
-        canvas.drawRoundRect(viewRectBuffer[0], viewRectBuffer[1], viewRectBuffer[2],
-                viewRectBuffer[3], attribute.selectorRadius, attribute.selectorRadius,
+
+        canvas.drawRoundRect(new RectF(viewRectBuffer[0], viewRectBuffer[1], viewRectBuffer[2],
+                        viewRectBuffer[3]), attribute.selectorRadius, attribute.selectorRadius,
                 selectorBorderPaint);
 
         //绘制选择器填充背景
-        canvas.drawRoundRect(viewRectBuffer[0] + borderOffset, viewRectBuffer[1] + borderOffset,
-                viewRectBuffer[2] - borderOffset, viewRectBuffer[3] - borderOffset,
+        canvas.drawRoundRect(new RectF(viewRectBuffer[0] + borderOffset, viewRectBuffer[1] + borderOffset,
+                        viewRectBuffer[2] - borderOffset, viewRectBuffer[3] - borderOffset),
                 attribute.selectorRadius, attribute.selectorRadius, selectorBackgroundPaint);
 
         //绘制选择器内容信息

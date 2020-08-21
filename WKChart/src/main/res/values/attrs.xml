@@ -52,6 +52,8 @@
         <!-- 与 axis 标尺刻度有关属性 -->
         <!-- axis 列数 -->
         <attr name="axisCount" format="integer" />
+        <!-- axis 是否隐藏第一列显示 -->
+        <attr format="boolean" name="axisHideFirst"/>
         <!-- axis 标签左右Margin -->
         <attr name="axisLabelLRMargin" format="dimension" />
         <!-- axis 标签上下Margin -->

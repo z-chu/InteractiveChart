@@ -92,6 +92,9 @@ public class AttributeRead {
         attribute.axisCount = a.getInteger(R.styleable.ChartAttr_axisCount,
                 attribute.axisCount);//axis数量
 
+        attribute.axisHideFirst = a.getBoolean(R.styleable.ChartAttr_axisHideFirst,
+                true);//axis是否隐藏第一列显示
+
         attribute.axisLabelLRMargin = a.getDimension(R.styleable.ChartAttr_axisLabelLRMargin,
                 attribute.axisLabelLRMargin);//axis标签左右Margin
 

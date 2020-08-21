@@ -69,7 +69,8 @@ public class AxisDrawing extends AbsDrawing<AbsRender, AbsChartModule> {
 
     @Override
     public void onDraw(Canvas canvas, int begin, int end, float[] extremum) {
-        for (int i = 1; i < attribute.axisCount; i++) {
+        int loopFirst = attribute.axisHideFirst ? 1 : 0;
+        for (int i = loopFirst; i < attribute.axisCount; i++) {
             pointCache[1] = lineBuffer[1] = lineBuffer[3] = viewRect.top + i * regionHeight;
             render.invertMapPoints(pointCache);
             String text = render.exchangeRateConversion(pointCache[1],

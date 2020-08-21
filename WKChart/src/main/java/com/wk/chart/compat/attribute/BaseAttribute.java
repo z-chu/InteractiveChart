@@ -61,7 +61,8 @@ public class BaseAttribute {
     /**
      * 与 axis 标尺刻度有关属性
      */
-    public int axisCount = 3; // axis数量
+    public int axisCount = 5; // axis数量
+    public boolean axisHideFirst = true;
     public float axisLabelLRMargin = 16f;//axis标签左右Margin
     public float axisLabelTBMargin = 8f;//axis标签上下Margin
     public AxisLabelLocation axisLabelLocation = AxisLabelLocation.LEFT; // axis标签显示位置
@@ -151,10 +152,10 @@ public class BaseAttribute {
     public float pointBorderWidth = 3f; // 数据点矩形边框线宽度
     public float pointSpace = 8f;//数据点间隔
     public float pointWidth = 28f;//数据点初始宽度（缩放都将以此宽度为基准）
-    public float visibleCount = 20; // 竖屏状态下的默认缩放倍数下显示多少个蜡烛图。注：横屏时会自动根据视图宽高变化比例计算，不需要手工设置
-    public float maxScale = 10;// 最多放大倍数
-    public float minScale = 3;// 最多缩小倍数(缩小后的宽度不会小于 蜡烛图矩形边框线宽度（candleBorderWidth）)
-    public float currentScale = 1;// 当前X轴缩放倍数
+    public float visibleCount = 60; // 竖屏状态下的默认缩放倍数下显示多少个蜡烛图。注：横屏时会自动根据视图宽高变化比例计算，不需要手工设置
+    public float maxScale = 1.48F;// 最多放大倍数
+    public float minScale = 7.48F;// 最多缩小倍数(缩小后的宽度不会小于 蜡烛图矩形边框线宽度（candleBorderWidth）)
+    public float currentScale = 0.748F;// 当前X轴缩放倍数
 
     /**
      * 极值有关属性
