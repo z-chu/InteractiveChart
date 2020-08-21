@@ -1,0 +1,15 @@
+<resources>
+    <string name="wk_change_amount">Cambio</string>
+    <string name="wk_change_proportion">Cambio</string>
+    <string name="wk_close">Cerrar</string>
+    <string name="wk_depth_chart">Mapa de profundidad</string>
+    <string name="wk_high">Alto</string>
+    <string name="wk_k_chart">Gráfico de velas</string>
+    <string name="wk_low">Bajo</string>
+    <string name="wk_open">Abrir</string>
+    <string name="wk_price">Precio</string>
+    <string name="wk_time_value">Tiempo</string>
+    <string name="wk_total_amount">Cantidad total</string>
+    <string name="wk_total_cost">Costo total</string>
+    <string name="wk_volume">Volumen</string>
+</resources>

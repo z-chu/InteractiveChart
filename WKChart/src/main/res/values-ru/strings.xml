@@ -1,0 +1,15 @@
+<resources>
+    <string name="wk_change_amount">Рост и падение</string>
+    <string name="wk_change_proportion">проценты изменения</string>
+    <string name="wk_close">закрыть</string>
+    <string name="wk_depth_chart">диаграмма Глубины</string>
+    <string name="wk_high">высокий</string>
+    <string name="wk_k_chart">диаграмма линии K</string>
+    <string name="wk_low">низкий</string>
+    <string name="wk_open">открыть</string>
+    <string name="wk_price">цена</string>
+    <string name="wk_time_value">время</string>
+    <string name="wk_total_amount">общее количество</string>
+    <string name="wk_total_cost">Общая стоимость</string>
+    <string name="wk_volume">Объем торговли</string>
+</resources>

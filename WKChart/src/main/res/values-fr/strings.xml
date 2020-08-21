@@ -1,0 +1,15 @@
+<resources>
+  <string name="wk_change_amount">Montant de variation</string>
+  <string name="wk_change_proportion">Portée de variation</string>
+  <string name="wk_close">Fermer</string>
+  <string name="wk_depth_chart">Profondeur</string>
+  <string name="wk_high">Haut</string>
+  <string name="wk_k_chart">Graphique de K</string>
+  <string name="wk_low">Bas</string>
+  <string name="wk_open">Ouvert</string>
+  <string name="wk_price">Prix</string>
+  <string name="wk_time_value">Date</string>
+  <string name="wk_total_amount">Montant total</string>
+  <string name="wk_total_cost">Coût total</string>
+  <string name="wk_volume">Volume</string>
+</resources>

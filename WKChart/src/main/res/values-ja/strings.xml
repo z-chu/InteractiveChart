@@ -1,0 +1,15 @@
+<resources>
+  <string name="wk_change_amount">変動額</string>
+  <string name="wk_change_proportion">変動率</string>
+  <string name="wk_close">閉じる</string>
+  <string name="wk_depth_chart">深さ図</string>
+  <string name="wk_high">高い</string>
+  <string name="wk_k_chart">K線</string>
+  <string name="wk_low">低い</string>
+  <string name="wk_open">保留中</string>
+  <string name="wk_price">価額</string>
+  <string name="wk_time_value">時間</string>
+  <string name="wk_total_amount">総額</string>
+  <string name="wk_total_cost">総コスト</string>
+  <string name="wk_volume">取引量</string>
+</resources>

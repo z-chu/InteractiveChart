@@ -1,0 +1,15 @@
+<resources>
+  <string name="wk_change_amount">변동액</string>
+  <string name="wk_change_proportion">등락폭</string>
+  <string name="wk_close">닫기</string>
+  <string name="wk_depth_chart">뎁스차트</string>
+  <string name="wk_high">고</string>
+  <string name="wk_k_chart">캔들차트</string>
+  <string name="wk_low">저</string>
+  <string name="wk_open">오픈</string>
+  <string name="wk_price">가격</string>
+  <string name="wk_time_value">시간</string>
+  <string name="wk_total_amount">총금액</string>
+  <string name="wk_total_cost">총원가</string>
+  <string name="wk_volume">체결량</string>
+</resources>

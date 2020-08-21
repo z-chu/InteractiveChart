@@ -1,0 +1,15 @@
+<resources>
+    <string name="wk_change_amount">Yükseliş ve İniş Tutarları</string>
+    <string name="wk_change_proportion">İnişler ve çıkışlar</string>
+    <string name="wk_close">Kapat</string>
+    <string name="wk_depth_chart">Fiyat grafiği</string>
+    <string name="wk_high">Yüksek</string>
+    <string name="wk_k_chart">Candlestick (Mumlar)</string>
+    <string name="wk_low">Düşük</string>
+    <string name="wk_open">Aç</string>
+    <string name="wk_price">Fiyat</string>
+    <string name="wk_time_value">Zaman</string>
+    <string name="wk_total_amount">Toplam Tutar</string>
+    <string name="wk_total_cost">Toplam Maliyet</string>
+    <string name="wk_volume">İşlem Hacmi</string>
+</resources>

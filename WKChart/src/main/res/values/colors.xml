@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#3F51B5</color>
+
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
 
@@ -10,8 +10,8 @@
   <color name="text_kChartDataTypeUnChecked">#707d8a</color>
 
 
-  <color name="chart_red">#ff6262</color>
-  <color name="chart_green">#2cc597</color>
+  <color name="chart_red">#F25C41</color>
+  <color name="chart_green">#46C17F</color>
 
   <color name="volume_red">#66ff6262</color>
   <color name="volume_green">#662cc597</color>
