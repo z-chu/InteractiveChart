@@ -55,9 +55,11 @@ public class HighlightDrawing extends AbsDrawing<CandleRender, FloatChartModule>
 
         xHighlightPaint.setStyle(Paint.Style.STROKE);
         xHighlightPaint.setColor(attribute.xHighlightColor);
+        xHighlightPaint.setAntiAlias(true);
 
         yHighlightPaint.setStyle(Paint.Style.STROKE);
         yHighlightPaint.setColor(attribute.yHighlightColor);
+        yHighlightPaint.setAntiAlias(true);
 
         if (attribute.highLightStyle == HighLightStyle.DOTTED) {
             DashPathEffect dashPathEffect = new DashPathEffect(new float[]{10f, 5f}, 0);

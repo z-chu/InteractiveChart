@@ -63,10 +63,12 @@ public class MACDDrawing extends AbsDrawing<CandleRender, MACDChartModule> {
         diffPaint.setStyle(Paint.Style.STROKE);
         diffPaint.setStrokeWidth(attribute.lineWidth);
         diffPaint.setColor(attribute.line1Color);
+        diffPaint.setAntiAlias(true);
 
         deaPaint.setStyle(Paint.Style.STROKE);
         deaPaint.setStrokeWidth(attribute.lineWidth);
         deaPaint.setColor(attribute.line2Color);
+        deaPaint.setAntiAlias(true);
 
         increasingPaint.setStyle(attribute.increasingStyle);
         increasingPaint.setStrokeWidth(attribute.pointBorderWidth);
@@ -77,7 +79,6 @@ public class MACDDrawing extends AbsDrawing<CandleRender, MACDChartModule> {
         decreasingPaint.setStrokeWidth(attribute.pointBorderWidth);
         decreasingPaint.setColor(Utils.getColorWithAlpha(attribute.decreasingColor
                 , attribute.darkColorAlpha));
-
         borderOffset = attribute.pointBorderWidth / 2;
     }
 

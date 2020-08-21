@@ -62,6 +62,7 @@ public class MeasureUtils {
         height -= viewIntervalCount;
         float parentHeight = viewIntervalCount;
         float value;
+        float totalProportion=0f;
         for (int i = 0, z = chartModules.size(), count = enableModuleCount; i < z; i++) {
             AbsChartModule item = chartModules.get(i);
             if (isInitProportion) {
@@ -73,10 +74,15 @@ public class MeasureUtils {
                 }
                 item.setProportion(value == 0 ? getDefaultProportion(item.getModuleType()) : value);
             }
-            item.setViewHeight(height * item.getProportion());
+            if(item.isEnable()) {
+                totalProportion += item.getProportion();
+            }
+        }
+
+        for (int i = 0, z = chartModules.size(); i < z; i++) {
+            AbsChartModule item = chartModules.get(i);
+            item.setViewHeight(height * (item.getProportion()/totalProportion));
             parentHeight += item.isEnable() ? item.getViewHeight() : 0;
-//            Log.e(TAG, "--Proportion：" + item.getProportion());
-//            Log.e(TAG, "--viewHeight：" + item.getViewHeight());
         }
         isInitProportion = false;
         return parentHeight;

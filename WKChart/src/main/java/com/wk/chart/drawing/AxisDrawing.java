@@ -51,6 +51,7 @@ public class AxisDrawing extends AbsDrawing<AbsRender, AbsChartModule> {
         axisPaint.setStyle(Paint.Style.STROKE);
         axisPaint.setStrokeWidth(attribute.lineWidth);
         axisPaint.setColor(attribute.lineColor);
+        axisPaint.setAntiAlias(true);
 
         Utils.measureTextArea(axisLabelPaintLeft, rect);
         textCenter = rect.height() / 2f;

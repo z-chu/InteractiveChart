@@ -47,11 +47,14 @@ public class VolumeDrawing extends AbsDrawing<CandleRender, VolumeChartModule> {
         increasingPaint.setStrokeWidth(attribute.pointBorderWidth);
         increasingPaint.setColor(Utils.getColorWithAlpha(attribute.increasingColor
                 , attribute.darkColorAlpha));
+        increasingPaint.setAntiAlias(true);
 
         decreasingPaint.setStyle(attribute.decreasingStyle);
         decreasingPaint.setStrokeWidth(attribute.pointBorderWidth);
         decreasingPaint.setColor(Utils.getColorWithAlpha(attribute.decreasingColor
                 , attribute.darkColorAlpha));
+        decreasingPaint.setAntiAlias(true);
+
 
         borderOffset = attribute.pointBorderWidth / 2;
     }

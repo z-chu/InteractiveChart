@@ -139,6 +139,7 @@ public class IndicatorLineDrawing extends AbsDrawing<CandleRender, AbsChartModul
             for (int i = 0; i < indicatorTag.getFlagEntries().length; i++) {
                 Paint linePaint = new Paint();
                 linePaint.setStyle(Paint.Style.STROKE);
+                linePaint.setAntiAlias(true);
                 linePaint.setStrokeWidth(attribute.lineWidth);
                 linePaint.setColor(indicatorTag.getFlagEntries()[i].getColor());
                 paints[i] = linePaint;

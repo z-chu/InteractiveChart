@@ -62,10 +62,12 @@ public class DepthDrawing extends AbsDrawing<DepthRender, DepthChartModule> {
         bidPolylinePaint.setStrokeWidth(attribute.polylineWidth);
         bidPolylinePaint.setColor(attribute.increasingColor);
         bidPolylinePaint.setStyle(Paint.Style.STROKE);
+        bidPolylinePaint.setAntiAlias(true);
 
         askPolylinePaint.setStrokeWidth(attribute.polylineWidth);
         askPolylinePaint.setColor(attribute.decreasingColor);
         askPolylinePaint.setStyle(Paint.Style.STROKE);
+        askPolylinePaint.setAntiAlias(true);
 
         offset = chartModule.getxOffset();
     }

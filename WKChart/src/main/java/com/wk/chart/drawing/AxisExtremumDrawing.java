@@ -46,6 +46,7 @@ public class AxisExtremumDrawing extends AbsDrawing<AbsRender, AbsChartModule> {
         linePaint.setStyle(Paint.Style.STROKE);
         linePaint.setStrokeWidth(attribute.lineWidth);
         linePaint.setColor(attribute.lineColor);
+        linePaint.setAntiAlias(true);
 
         Utils.measureTextArea(labelPaintLeft, rect);
     }

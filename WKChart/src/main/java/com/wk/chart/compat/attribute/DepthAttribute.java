@@ -21,8 +21,8 @@ public class DepthAttribute extends BaseAttribute {
     /**
      * 与深度图有关的属性
      */
-    public float polylineWidth = 6f; // 折线宽度
-    public float circleSize = 12f;// 圆点大小
+    public float polylineWidth = 2.5f; // 折线宽度
+    public float circleSize = 10f;// 圆点大小
 
 
     /**
