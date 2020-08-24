@@ -77,10 +77,12 @@ public class GridDrawing extends AbsDrawing<CandleRender, AbsChartModule> {
         if (current == 0 || current == render.getAdapter().getLastPosition() || current % render.getInterval() != 0) {
             return;
         }
-        point[position * 2] = current + 0.5f;
-        label[position] = DisplayTypeUtils.format(render.getAdapter().getItem(current).getTime(),
-                render.getAdapter().getDisplayType());
-        position++;
+        if(position*2<point.length) {
+            point[position * 2] = current + 0.5f;
+            label[position] = DisplayTypeUtils.format(render.getAdapter().getItem(current).getTime(),
+                    render.getAdapter().getDisplayType());
+            position++;
+        }
     }
 
     @Override
