@@ -10,27 +10,27 @@ import java.io.Serializable;
  */
 
 public enum DisplayType implements Serializable {
-    oneMinute(0, "MM-dd HH:mm", 1, 60000, "1min"),//一分钟
+    oneMinute(0, "HH:mm", 1, 60000, "1min"),//一分钟
 
-    fiveMinute(1, oneMinute.pattern, 5, oneMinute.msec, "5min"),//五分钟
+    fiveMinute(1, "MM-dd HH:mm", 5, oneMinute.msec, "5min"),//五分钟
 
-    fifteenMinute(2, oneMinute.pattern, 15, oneMinute.msec, "15min"),//十五分钟
+    fifteenMinute(2, fiveMinute.pattern, 15, oneMinute.msec, "15min"),//十五分钟
 
-    thirtyMinute(3, oneMinute.pattern, 30, oneMinute.msec, "30min"),//三十分钟
+    thirtyMinute(3, fiveMinute.pattern, 30, oneMinute.msec, "30min"),//三十分钟
 
-    oneHour(4, oneMinute.pattern, 1, oneMinute.msec * 60, "60min"),//一小时
+    oneHour(4, fiveMinute.pattern, 1, oneMinute.msec * 60, "60min"),//一小时
 
-    twoHour(5, oneMinute.pattern, 2, oneHour.msec, "2hour"),//二小时
+    twoHour(5, fiveMinute.pattern, 2, oneHour.msec, "2hour"),//二小时
 
-    threeHour(6, oneMinute.pattern, 3, oneHour.msec, "3hour"),//三小时
+    threeHour(6, fiveMinute.pattern, 3, oneHour.msec, "3hour"),//三小时
 
-    fourHour(7, oneMinute.pattern, 4, oneHour.msec, "4hour"),//四小时
+    fourHour(7, fiveMinute.pattern, 4, oneHour.msec, "4hour"),//四小时
 
-    sixHour(8, oneMinute.pattern, 6, oneHour.msec, "6hour"),//六小时
+    sixHour(8, fiveMinute.pattern, 6, oneHour.msec, "6hour"),//六小时
 
-    eightHour(9, oneMinute.pattern, 8, oneHour.msec, "8hour"),//八小时
+    eightHour(9, fiveMinute.pattern, 8, oneHour.msec, "8hour"),//八小时
 
-    twelveHour(10, oneMinute.pattern, 12, oneHour.msec, "12hour"),//十二小时
+    twelveHour(10, "yy-MM-dd", 12, oneHour.msec, "12hour"),//十二小时
 
     day(11, "yy-MM-dd", 1, oneHour.msec * 24, "1day"),//天
 
