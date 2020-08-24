@@ -266,7 +266,7 @@ public abstract class AbsRender<T extends AbsAdapter, A extends BaseAttribute> {
      * 是否可以拖动
      */
     public boolean canDragging() {
-        return true;
+        return attribute.canDragging;
     }
 
     /**

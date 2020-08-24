@@ -232,6 +232,8 @@
         <attr name="pointSpace" format="dimension" />
         <!-- 能否滚动 -->
         <attr name="canScroll" format="boolean" />
+        <!-- 能否拖动 -->
+        <attr name="canDragging" format="boolean" />
         <!-- 最多放大倍数 -->
         <attr name="maxScale" format="float" />
         <!-- 最多缩小倍数 -->

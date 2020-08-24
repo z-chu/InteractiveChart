@@ -316,6 +316,9 @@ public class AttributeRead {
         attribute.canScroll = a.getBoolean(R.styleable.ChartAttr_canScroll,
                 attribute.canScroll);// 能否滚动
 
+        attribute.canDragging = a.getBoolean(R.styleable.ChartAttr_canDragging,
+                attribute.canDragging);// 能否拖动
+
         attribute.maxScale = a.getFloat(R.styleable.ChartAttr_maxScale, attribute.maxScale);// 最多放大倍数
 
         float minScale =

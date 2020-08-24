@@ -149,6 +149,7 @@ public class BaseAttribute {
      * 缩放有关的属性
      */
     public boolean canScroll = true;// 能否滚动
+    public boolean canDragging = true;// 能否拖动
     public float pointBorderWidth = 3f; // 数据点矩形边框线宽度
     public float pointSpace = 8f;//数据点间隔
     public float pointWidth = 28f;//数据点初始宽度（缩放都将以此宽度为基准）
