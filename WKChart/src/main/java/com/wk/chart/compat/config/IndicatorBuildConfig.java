@@ -3,6 +3,7 @@ package com.wk.chart.compat.config;
 import android.util.ArrayMap;
 
 import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.wk.chart.entry.IndicatorTagEntry;
@@ -93,7 +94,7 @@ public class IndicatorBuildConfig extends AbsBuildConfig {
      * @param flags         指标标识（数组）
      * @param colors        指标颜色（数组）
      */
-    private IndicatorBuildConfig putIndicatorConfig(@IndicatorType int indicatorType, String tag, String[] names, int[] flags, @ColorInt int[] colors) {
+    public IndicatorBuildConfig putIndicatorConfig(@IndicatorType int indicatorType, String tag, String[] names, int[] flags, @ColorInt int[] colors) {
         if (null == names || null == flags || null == colors) {
             return this;
         }
@@ -123,6 +124,7 @@ public class IndicatorBuildConfig extends AbsBuildConfig {
      * @return 配置类（复制品）
      */
     @Override
+    @NonNull
     public IndicatorBuildConfig clone() {
         IndicatorBuildConfig clone = new IndicatorBuildConfig();
         for (Map.Entry<Integer, IndicatorTagEntry> entry : this.indicatorFlags.entrySet()) {
